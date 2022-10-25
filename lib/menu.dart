@@ -94,10 +94,10 @@ class Menu extends StatelessWidget {
                   height: 56,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.pushReplacement(context,
-                      //     MaterialPageRoute(builder: (context) {
-                      //   return Todo();
-                      // }));
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Todo();
+                      }));
                     },
                     child: Text('My To-Do'),
                     style: ElevatedButton.styleFrom(

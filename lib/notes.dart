@@ -100,19 +100,21 @@ class CreateNotes extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 8,
-          ),
-          Center(
-            child: Container(
-              width: 368,
-              height: 640,
-              color: Color(0xff699AAE),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 8,
             ),
-          )
-        ],
+            Center(
+              child: Container(
+                width: 368,
+                height: 640,
+                color: Color(0xff699AAE),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
