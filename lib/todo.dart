@@ -2,9 +2,49 @@ import 'package:flutter/material.dart';
 import 'package:journive_app/home.dart';
 import 'package:journive_app/menu.dart';
 
-// class Todo extends StatefulWidget {
-//   _Todo createState() => _Todo();
-// }
+class Todo extends StatefulWidget {
+  Todo({Key? key}) : super(key: key);
+
+  @override
+  State<Todo> createState() => _Todo();
+}
+
+class _Todo extends State<Todo> {
+  final todosList = CreateTodo.todoList();
+  List<CreateTodo> _foundToDo = [];
+  final _todoController = TextEditingController();
+
+  @override
+  void initState() {
+    _foundToDo = todosList;
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+        backgroundColor: Color(0xffB8E8FC),
+        appBar: AppBar(
+          backgroundColor: Color(0xffC8FFD4),
+          automaticallyImplyLeading: false,
+          leading: Container(
+            padding: EdgeInsets.all(5),
+            child: Image.asset('images/journivelogo.png'),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ));
+  }
+}
 
 // class _Todo extends State<Todo> {
 //   final todosList = ToDo.todoList();
@@ -40,6 +80,24 @@ import 'package:journive_app/menu.dart';
 //       ),
 //     );
 //   }
+
+class CreateTodo {
+  String? id;
+  String? todoText;
+  bool isDone;
+
+  CreateTodo({
+    required this.id,
+    required this.todoText,
+    this.isDone = false,
+  });
+
+  static List<CreateTodo> todoList() {
+    return [
+      CreateTodo(id: '01', todoText: 'Workout', isDone: true),
+    ];
+  }
+}
 
 // @override
 // Widget build(BuildContext context) {
@@ -102,57 +160,57 @@ import 'package:journive_app/menu.dart';
 // }
 // }
 
-class CreateTodo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      backgroundColor: Color(0xffB8E8FC),
-      appBar: AppBar(
-        leading: Container(
-          padding: EdgeInsets.all(5),
-          child: Image.asset('images/journivelogo.png'),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                // Navigator.pushReplacement(context,
-                //     MaterialPageRoute(builder: (context) {
-                //   return Todo();
-                // }));
-              },
-              icon: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              ))
-        ],
-        automaticallyImplyLeading: false,
-        backgroundColor: Color(0xffC8FFD4),
-        centerTitle: true,
-        title: Text('My To-Do'),
-        // leading: IconButton(
-        //   onPressed: () {
-        //     Navigator.pushReplacement(context,
-        //         MaterialPageRoute(builder: (context) {
-        //       return Todo();
-        //     }));
-        //   },
-        //   icon: Icon(
-        //     Icons.arrow_back,
-        //     color: Colors.black,
-        //   ),
-        // ),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 8,
-          ),
-          Center(
-            child: Container(width: 328, height: 400, color: Color(0xffC8FFD4)),
-          )
-        ],
-      ),
-    );
-  }
-}
+// class CreateTodo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return Scaffold(
+//       backgroundColor: Color(0xffB8E8FC),
+//       appBar: AppBar(
+//         leading: Container(
+//           padding: EdgeInsets.all(5),
+//           child: Image.asset('images/journivelogo.png'),
+//         ),
+//         actions: [
+//           IconButton(
+//               onPressed: () {
+//                 // Navigator.pushReplacement(context,
+//                 //     MaterialPageRoute(builder: (context) {
+//                 //   return Todo();
+//                 // }));
+//               },
+//               icon: Icon(
+//                 Icons.arrow_back,
+//                 color: Colors.black,
+//               ))
+//         ],
+//         automaticallyImplyLeading: false,
+//         backgroundColor: Color(0xffC8FFD4),
+//         centerTitle: true,
+//         title: Text('My To-Do'),
+//         // leading: IconButton(
+//         //   onPressed: () {
+//         //     Navigator.pushReplacement(context,
+//         //         MaterialPageRoute(builder: (context) {
+//         //       return Todo();
+//         //     }));
+//         //   },
+//         //   icon: Icon(
+//         //     Icons.arrow_back,
+//         //     color: Colors.black,
+//         //   ),
+//         // ),
+//       ),
+//       body: Column(
+//         children: [
+//           SizedBox(
+//             height: 8,
+//           ),
+//           Center(
+//             child: Container(width: 328, height: 400, color: Color(0xffC8FFD4)),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }

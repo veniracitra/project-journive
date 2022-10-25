@@ -37,31 +37,33 @@ class _Notes extends State<Notes> {
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
           ),
         ),
-        body: Column(
-          children: [
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-              'JOURNAL',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
-            ),
-            SizedBox(
-              height: 480,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) {
-                    return CreateNotes();
-                  }));
-                },
-                style: ElevatedButton.styleFrom(primary: Color(0xffB1AFFF)),
-                child: Text(
-                  "Add To-Do",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ))
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                'JOURNAL',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
+              ),
+              SizedBox(
+                height: 480,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return CreateNotes();
+                    }));
+                  },
+                  style: ElevatedButton.styleFrom(primary: Color(0xffB1AFFF)),
+                  child: Text(
+                    "Add To-Do",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ))
+            ],
+          ),
         ));
   }
 }
