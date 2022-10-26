@@ -96,7 +96,7 @@ class Menu extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return Todo();
+                        return MyTodo();
                       }));
                     },
                     child: Text('My To-Do'),

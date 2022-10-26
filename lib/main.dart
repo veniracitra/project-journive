@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:journive_app/splashscreen.dart';
+import 'package:journive_app/screens/splashscreen.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
