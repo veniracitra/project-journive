@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "495926996340",
+    "project_id": "journivenotes",
+    "storage_bucket": "journivenotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495926996340:android:2e5a6cf4c6dd4055249021",
+        "android_client_info": {
+          "package_name": "com.example.journive_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495926996340-3u9npcs5b26o8ejm71cet1h0ajrj4ejt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhafvI8NaZ9LkKRqfc-KQD2OmANj8CFuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495926996340-3u9npcs5b26o8ejm71cet1h0ajrj4ejt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

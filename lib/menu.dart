@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:journive_app/models/notes_item.dart';
 import 'package:journive_app/notes.dart';
 import 'package:journive_app/todo.dart';
 
