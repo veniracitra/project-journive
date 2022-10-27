@@ -6,45 +6,75 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color(0xffB8E8FC),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 160,
+        backgroundColor: Color(0xffB8E8FC),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/bgjournive.png'),
+              fit: BoxFit.cover,
             ),
-            Container(
-              width: 320,
-              height: 320,
-              child: Image.asset('images/journive.png'),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            SizedBox(
-              width: 96,
-              height: 32,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) {
-                    return Menu();
-                  }));
-                },
-                child: Text(
-                  'START',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black),
-                ),
-                style: ElevatedButton.styleFrom(
-                    primary: Color(0xffB1AFFF),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(60))),
+          ),
+          child: Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return Menu();
+                }));
+              },
+              child: Text(
+                'START',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
               ),
-            )
-          ],
-        ),
-      ),
-    );
+              style: ElevatedButton.styleFrom(
+                  primary: Color(0xffB1AFFF),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(60))),
+            ),
+          ),
+        )
+        // Center(
+        //   child: Column(
+        //     children: [
+        //       SizedBox(
+        //         height: 160,
+        //       ),
+        //       Container(
+        //         child: Image.asset(
+        //           'images/bgjournive.png',
+        //           fit: BoxFit.cover,
+        //         ),
+        //       ),
+        //       SizedBox(
+        //         height: 16,
+        //       ),
+        //       SizedBox(
+        //         width: 96,
+        //         height: 32,
+        //         child: ElevatedButton(
+        //           onPressed: () {
+        // Navigator.pushReplacement(context,
+        //     MaterialPageRoute(builder: (context) {
+        //   return Menu();
+        // }));
+        //           },
+        // child: Text(
+        //   'START',
+        //   style: TextStyle(
+        //       fontWeight: FontWeight.bold, color: Colors.black),
+        // ),
+        // style: ElevatedButton.styleFrom(
+        //     primary: Color(0xffB1AFFF),
+        //     shape: RoundedRectangleBorder(
+        //         borderRadius: BorderRadius.circular(60))),
+        //   ),
+        // )
+        //     ],
+        //   ),
+        // ),
+        );
   }
 }
